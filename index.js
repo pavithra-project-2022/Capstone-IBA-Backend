@@ -7,7 +7,10 @@ const app = express();
 const port = process.env.PORT || 7700;
 
 //middle ware
-app.use(cors());
+app.use(cors({
+  origin: "*",
+}))
+
 app.use(express.json());
 require("dotenv").config();
 
